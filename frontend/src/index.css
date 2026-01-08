@@ -1,0 +1,125 @@
+@import "tailwindcss";
+
+:root {
+  --ube-red: #E30613;
+  --ube-red-dark: #C00510;
+
+  /* Premium Soft Neumorphic - Light Palette */
+  --bg-main: #F8FAFC;
+  --bg-card: #F8FAFC;
+  --text-primary: #1E293B;
+  --text-secondary: #475569;
+  --text-muted: #94A3B8;
+
+  /* Softer shadows for a cleaner look */
+  --shadow-flat: 12px 12px 24px rgba(226, 232, 240, 0.8), -12px -12px 24px rgba(255, 255, 255, 1);
+  --shadow-inset: inset 4px 4px 8px rgba(226, 232, 240, 0.8), inset -4px -4px 8px rgba(255, 255, 255, 1);
+  --shadow-button: 8px 8px 16px rgba(226, 232, 240, 0.8), -8px -8px 16px rgba(255, 255, 255, 1);
+  --shadow-button-active: inset 3px 3px 6px rgba(226, 232, 240, 0.8), inset -3px -3px 6px rgba(255, 255, 255, 1);
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  font-family: 'Inter', system-ui, sans-serif;
+  letter-spacing: -0.015em;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Core Neumorphic Classes - Refined & Soft */
+.neu-card {
+  background-color: var(--bg-card);
+  border-radius: 2rem;
+  box-shadow: var(--shadow-flat);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.neu-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 16px 16px 32px rgba(226, 232, 240, 0.9), -16px -16px 32px rgba(255, 255, 255, 1);
+}
+
+.neu-inset {
+  background-color: var(--bg-card);
+  border-radius: 1.25rem;
+  box-shadow: var(--shadow-inset);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.neu-inset:focus {
+  box-shadow: inset 6px 6px 12px rgba(226, 232, 240, 1), inset -6px -6px 12px rgba(255, 255, 255, 1);
+  border-color: rgba(227, 6, 19, 0.1);
+}
+
+.neu-button-primary {
+  background-color: #E30613;
+  color: white;
+  font-weight: 800;
+  padding: 0.875rem 1.75rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 20px -5px rgba(227, 6, 19, 0.4);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.neu-button-primary:hover {
+  background-color: #C00510;
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px -5px rgba(227, 6, 19, 0.5);
+}
+
+.neu-button-primary:active {
+  transform: scale(0.96);
+}
+
+/* Custom Scrollbar - Minimal */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.2);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(227, 6, 19, 0.3);
+}
+
+/* Animations */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slideUp {
+  animation: slideUp 0.6s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.4s ease-out forwards;
+}
