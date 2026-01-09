@@ -1,4 +1,4 @@
-# Sistema de Gestión Académica UBE - Prueba Técnica
+# Sistema de Gestión Académica - Prueba Técnica
 
 Este es un sistema integral para la gestión de **Carreras** y **Modalidades** académicas, desarrollado como parte de la evaluación de pasantía. El sistema destaca por su arquitectura limpia en el backend y una interfaz de usuario moderna con estilo neumórfico.
 
